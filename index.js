@@ -111,18 +111,15 @@ inquirer
 1. [Description](#description)
 2. [Installation](#installation)
 3. [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
 ## Description   
   ${answers.description}        
 ## Installation
     ${answers.installation}
 ## Usage
     ${answers.usage}
-## License
-    ${answers.lisense}
 ## Contributing
     ${answers.contributing}
     contributing guidelines
