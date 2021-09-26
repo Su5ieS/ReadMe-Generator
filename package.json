@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Su5ieS/ReadMe-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Su5ieS/ReadMe-Generator/issues"
+  },
+  "homepage": "https://github.com/Su5ieS/ReadMe-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  }
+}
