@@ -1,24 +1,22 @@
-# ljkdsfljjdfs
+# Professional README generator
 ## Licensing: 
 [![license](https://img.shields.io/badge/license-MIT-orange)](https://shields.io)
 ## Table of Contents 
 1. [Description](#description)
 2. [Installation](#installation)
 3. [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
 ## Description   
-  jljkjldsf        
+  it makes a readme         
 ## Installation
-    kjlljfsdjkl
+    download from Github and make sure npm inquirer is installed
 ## Usage
-    lkjdljfdjskl
+    use it
 ## Contributing
-    lkjdfsjkdfljs
-    contributing guidelines
+    not accepting contributions
 ## Tests
-    lkjljkjldfs
-    test instructions
+    n/a
 ## Questions
-    lkjljkljsdf
+    SusannaSkornicka@gmail.com or on GitHub Su5ieS

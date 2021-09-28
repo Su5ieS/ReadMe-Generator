@@ -30,6 +30,19 @@ inquirer
       },
     },
     {
+        type: "input",
+        message: "Please paste links to screenshots or video here",
+        name: "visual",
+        validate: (visualAnswer) => {
+          if (visualAnswer) {
+            return true;
+          } else {
+            console.log("Please paste screen shots or video to continue.");
+            return false;
+          }
+        },
+      },
+    {
       type: "input",
       message: "Please list installation instructions",
       name: "installation",
@@ -89,17 +102,30 @@ inquirer
     },
     {
       type: "input",
-      message: "How to contact with questions? Email and GitHub",
+      message: "Provide email to contact with questions?",
       name: "questions",
       validate: (questAnswer) => {
         if (questAnswer) {
           return true;
         } else {
-          console.log("Please enter email and GitHub to continue.");
+          console.log("Please enter email to continue.");
           return false;
         }
       },
     },
+    {
+        type: "input",
+        message: "Provide Link to GitHub profile.",
+        name: "github",
+        validate: (gitAnswer) => {
+          if (gitAnswer) {
+            return true;
+          } else {
+            console.log("Please enter GitHub to continue.");
+            return false;
+          }
+        },
+      },
   ])
   /* Pass your questions in here */
   .then((answers) => {
@@ -122,12 +148,10 @@ inquirer
     ${answers.usage}
 ## Contributing
     ${answers.contributing}
-    contributing guidelines
 ## Tests
     ${answers.testing}
-    test instructions
 ## Questions
-    ${answers.questions}`;
+    If you have questions reachout via email:${answers.questions} or check out this GitHub: ${github.answers}.`;
     // Use user feedback for... whatever!!
     fs.writeFile("README.md", generateREADME, (error) => {
       console.log(error);
