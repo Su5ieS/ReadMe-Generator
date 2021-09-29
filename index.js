@@ -31,6 +31,32 @@ inquirer
     },
     {
       type: "input",
+      message: "Please enter link to diployed project",
+      name: "deploy",
+      validate: (deployAnswer) => {
+        if (deployAnswer) {
+          return true;
+        } else {
+          console.log("Please enter link to diployed project to continue.");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "please paste any screenshots/videos",
+      name: "visuals",
+      validate: (visAnswer) => {
+        if (visAnswer) {
+          return true;
+        } else {
+          console.log("Please provide visuals.");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
       message: "Please list installation instructions",
       name: "installation",
       validate: (installAnswer) => {
@@ -89,13 +115,26 @@ inquirer
     },
     {
       type: "input",
-      message: "How to contact with questions? Email and GitHub",
-      name: "questions",
-      validate: (questAnswer) => {
-        if (questAnswer) {
+      message: "What is your email for questions?",
+      name: "email",
+      validate: (emailAnswer) => {
+        if (emailAnswer) {
           return true;
         } else {
-          console.log("Please enter email and GitHub to continue.");
+          console.log("Please enter email to continue.");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      message: "enter link to GitHub repo",
+      name: "github",
+      validate: (gitAnswer) => {
+        if (gitAnswer) {
+          return true;
+        } else {
+          console.log("Please enter GitHub to continue.");
           return false;
         }
       },
@@ -115,7 +154,12 @@ inquirer
 5. [Tests](#tests)
 6. [Questions](#questions)
 ## Description   
-  ${answers.description}        
+  ${answers.description} 
+
+  Link to deployed project: ${answers.deploy}
+
+  Screenhots/link to video tour:
+  ${answers.visuals}       
 ## Installation
     ${answers.installation}
 ## Usage
@@ -125,7 +169,7 @@ inquirer
 ## Tests
     ${answers.testing}
 ## Questions
-    ${answers.questions}`;
+    Please contact me @ ${answers.email}, also check out the GitHub repository ${answers.github}`;
 
     fs.writeFile("README.md", generateREADME, (error) => {
       console.log(error);
